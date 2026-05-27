@@ -1,20 +1,36 @@
-# Zheron Precision Website
+# Zheron Precision Bilingual Website
 
-This is a complete Vite + React website project.
+Complete Vite + React website project with Turkish / English language toggle.
 
-## Files
+## Upload to GitHub
 
-- `package.json`
-- `index.html`
-- `src/main.jsx`
-- `src/App.jsx`
-- `src/style.css`
+Upload these files and folders to the root of your GitHub repository:
 
-## GitHub / Vercel
+- package.json
+- index.html
+- README.md
+- src/
+- public/
 
-Upload the full contents of this folder to your GitHub repository root.
+## Image Files
 
-Vercel settings:
-- Framework Preset: Vite
-- Build Command: npm run build
-- Output Directory: dist
+The site is ready for real images.
+
+Put your final image files in:
+
+public/images/
+
+Recommended filenames:
+
+- hero-precision.jpg
+- cmm-measurement.jpg
+- surface-quality.jpg
+- micrometer.jpg
+
+If these images are missing, the site still works and shows controlled dark visual placeholders.
+
+## Vercel Settings
+
+Framework Preset: Vite  
+Build Command: npm run build  
+Output Directory: dist
