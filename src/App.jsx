@@ -97,6 +97,7 @@ const content = {
         "Alüminyum Alaşımları",
         "Paslanmaz Çelikler",
         "Titanyum",
+        "Mühendislik Plastikleri",
         "Takım Çelikleri",
         "Pirinç ve Bakır Alaşımları",
       ],
@@ -240,7 +241,7 @@ function LogoBlock() {
   return (
     <a href="#home" className="brand" aria-label="ZHERON Home">
       <img
-        src="/images/zheron-logo.jpg"
+        src="/images/zheron-logo.png"
         alt="ZHERON"
         className="brandLogo"
         onError={(event) => {
