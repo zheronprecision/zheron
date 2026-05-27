@@ -36,10 +36,10 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 18px clamp(22px, 5vw, 72px);
+  gap: 28px;
+  padding: 26px clamp(22px, 5vw, 72px);
   border-bottom: 1px solid var(--line);
-  background: rgba(31, 32, 34, 0.88);
+  background: rgba(31, 32, 34, 0.90);
   backdrop-filter: blur(16px);
 }
 
@@ -52,24 +52,26 @@ a { color: inherit; text-decoration: none; }
 
 .brandLogo {
   display: block;
-  width: 148px;
-  max-height: 48px;
+  width: 220px;
+  max-height: 74px;
   object-fit: contain;
   object-position: left center;
+  opacity: 1;
 }
 
 .logoFallback {
   display: none;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 650;
   letter-spacing: 0.32em;
 }
 
 .logoSub {
-  font-size: 10px;
-  letter-spacing: 0.26em;
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: rgba(255,255,255,0.62);
 }
 
 nav {
@@ -428,7 +430,7 @@ textarea:focus { border-color: rgba(255,255,255,0.28); }
 }
 
 .footer .brandLogo {
-  width: 128px;
+  width: 170px;
 }
 
 @media (max-width: 1180px) {
@@ -446,7 +448,7 @@ textarea:focus { border-color: rgba(255,255,255,0.28); }
 @media (max-width: 760px) {
   nav { display: none; }
   .navbar { padding-top: 16px; padding-bottom: 16px; }
-  .brandLogo { width: 128px; }
+  .brandLogo { width: 180px; }
   .logoSub { letter-spacing: 0.18em; }
   .heroVisual { min-height: 420px; border-radius: 26px; }
   .footer { align-items: flex-start; flex-direction: column; }
