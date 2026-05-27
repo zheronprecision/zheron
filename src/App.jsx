@@ -11,7 +11,7 @@ const content = {
     },
     hero: {
       eyebrow: "Savunma ve Havacılık Seviyesinde Hassas Parça Üretimi",
-      title: "Kontrollü üretim, Ölçülebilir kalite",
+      title: "Kontrollü üretim, ölçülebilir kalite",
       tagline: "Tolerans, yüzey kalitesi ve teslim disiplini gerektiren parçalar",
       paragraphs: [
         "ZHERON; savunma, havacılık ve yüksek hassasiyet gerektiren endüstriyel uygulamalar için tolerans kontrollü işlenmiş parçalar üretir.",
@@ -28,19 +28,19 @@ const content = {
     },
     what: {
       eyebrow: "Ne Yapıyoruz",
-      title: "Kritik Uygulamalar İçin Hassas Üretim",
+      title: "Kritik uygulamalar için hassas üretim",
       cards: [
         {
           title: "Yüksek Toleranslı İşleme",
-          text: "Kontrollü ölçüsel tutarlılığa sahip kompleks hassas parçaların üretimi.",
+          text: "Kontrollü ölçüsel tutarlılığa sahip kompleks hassas parçaların üretimi",
         },
         {
           title: "Proses Disiplini",
-          text: "Kararlı işleme yaklaşımı, ölçüm akışı ve tekrarlanabilir üretim mantığı.",
+          text: "Kararlı işleme yaklaşımı, ölçüm akışı ve tekrarlanabilir üretim mantığı",
         },
         {
           title: "Teslim Güvenilirliği",
-          text: "Planlı üretim yönetimi ve sorumluluğu net teslim süreçleri.",
+          text: "Planlı üretim yönetimi ve sorumluluğu net teslim süreçleri",
         },
       ],
     },
@@ -58,23 +58,23 @@ const content = {
       items: [
         {
           title: "Teknik İnceleme",
-          text: "Teknik resim değerlendirmesi, tolerans analizi ve üretilebilirlik incelemesi.",
+          text: "Teknik resim değerlendirmesi, tolerans analizi ve üretilebilirlik incelemesi",
         },
         {
           title: "Proses Planlama",
-          text: "İşleme yaklaşımı, bağlama planlaması ve operasyon sıralaması.",
+          text: "İşleme yaklaşımı, bağlama planlaması ve operasyon sıralaması",
         },
         {
           title: "Kontrollü İşleme",
-          text: "Ölçüsel takip ile kararlı ve tekrarlanabilir üretim.",
+          text: "Ölçüsel takip ile kararlı ve tekrarlanabilir üretim",
         },
         {
           title: "Ölçüm ve Doğrulama",
-          text: "Ölçüm temelli kalite kontrol ve dokümantasyon disiplini.",
+          text: "Ölçüm temelli kalite kontrol ve dokümantasyon disiplini",
         },
         {
           title: "Teslimat Koordinasyonu",
-          text: "Koruyucu paketleme ve planlı sevkiyat yönetimi.",
+          text: "Koruyucu paketleme ve planlı sevkiyat yönetimi",
         },
       ],
     },
