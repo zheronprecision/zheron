@@ -11,8 +11,8 @@ const content = {
     },
     hero: {
       eyebrow: "Savunma ve Havacılık Seviyesinde Hassas Parça Üretimi",
-      title: "Kontrollü üretim. Ölçülebilir kalite.",
-      tagline: "Tolerans, yüzey kalitesi ve teslim disiplini gerektiren parçalar için.",
+      title: "Kontrollü üretim, Ölçülebilir kalite",
+      tagline: "Tolerans, yüzey kalitesi ve teslim disiplini gerektiren parçalar",
       paragraphs: [
         "ZHERON; savunma, havacılık ve yüksek hassasiyet gerektiren endüstriyel uygulamalar için tolerans kontrollü işlenmiş parçalar üretir.",
         "Üretimde hacim iddialarından çok; yüzey kalitesi, ölçüsel tutarlılık, proses disiplini ve teslim güvenilirliğine odaklanırız.",
