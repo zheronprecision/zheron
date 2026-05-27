@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg: #1f2022;
+  --bg: #2a2623;
   --panel-soft: rgba(255, 255, 255, 0.025);
   --line: rgba(255, 255, 255, 0.08);
   --text: #f4f3ef;
   --muted: rgba(244, 243, 239, 0.68);
   --faint: rgba(244, 243, 239, 0.42);
-  --bronze: #a89272;
+  --bronze: #c6a57a;
 }
 
 * {
@@ -34,7 +34,7 @@ a {
   min-height: 100vh;
   background:
     radial-gradient(circle at top right, rgba(168,146,114,0.10), transparent 30%),
-    linear-gradient(180deg, #242527 0%, #1f2022 52%, #1a1b1d 100%);
+    linear-gradient(180deg, #332d29 0%, #2a2623 48%, #211d1a 100%);
 }
 
 /* HEADER */
@@ -52,7 +52,7 @@ a {
 
   padding: 28px clamp(24px, 5vw, 80px);
 
-  background: rgba(10,10,10,0.18);
+  background: rgba(34,28,24,0.22);
   backdrop-filter: blur(14px);
 
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -273,12 +273,12 @@ h3 {
 
   object-fit: cover;
 
-  opacity: .42;
+  opacity: .58;
 
   filter:
     grayscale(1)
     contrast(1.08)
-    brightness(.78);
+    brightness(.92);
 }
 
 .heroVisual::after {
@@ -288,8 +288,8 @@ h3 {
   inset: 0;
 
   background:
-    linear-gradient(90deg, rgba(20,20,20,.72), transparent 45%, rgba(20,20,20,.38)),
-    linear-gradient(0deg, rgba(20,20,20,.68), transparent 44%);
+    linear-gradient(90deg, rgba(26,22,20,.42), transparent 42%, rgba(26,22,20,.18)),
+    linear-gradient(0deg, rgba(26,22,20,.36), transparent 44%);
 }
 
 .measurementRing {
@@ -363,7 +363,7 @@ h3 {
 }
 
 .muted {
-  background: rgba(255,255,255,0.018);
+  background: rgba(255,248,240,0.03);
 }
 
 .sectionHeader {
@@ -389,7 +389,7 @@ h3 {
 
   border: 1px solid rgba(255,255,255,0.08);
 
-  background: var(--panel-soft);
+  background: rgba(255,255,255,0.045);
 
   box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
 }
@@ -633,4 +633,68 @@ textarea:focus {
   h1 {
     font-size: 46px;
   }
+}
+
+
+/* BRONZE ACCENTS */
+
+h2 {
+  color: #f1ebe5;
+}
+
+.eyebrow {
+  color: rgba(198,165,122,0.72);
+}
+
+.visualTag {
+  border: 1px solid rgba(198,165,122,0.22);
+  color: rgba(230,210,185,0.82);
+}
+
+.card h3,
+.listCard {
+  color: #f0e6dc;
+}
+
+.langSwitch {
+  border: 1px solid rgba(198,165,122,0.26);
+}
+
+.langSwitch:hover {
+  background: rgba(198,165,122,0.16);
+}
+
+.imageTile span {
+  color: rgba(230,210,185,0.92);
+}
+
+.logoSub {
+  color: rgba(220,190,155,0.72);
+}
+
+.solidBtn {
+  background: #c6a57a;
+  border-color: #c6a57a;
+  color: #171411;
+}
+
+.solidBtn:hover {
+  background: #d8b48a;
+  border-color: #d8b48a;
+}
+
+.outlineBtn:hover {
+  background: #c6a57a;
+  border-color: #c6a57a;
+  color: #171411;
+}
+
+.measurementRing,
+.measurementRing::before,
+.measurementRing::after {
+  border-color: rgba(198,165,122,0.14);
+}
+
+.heroVisual {
+  box-shadow: 0 40px 120px rgba(0,0,0,.20);
 }
