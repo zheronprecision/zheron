@@ -46,56 +46,115 @@ a {
   width: 100%;
   z-index: 50;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(360px, 1.2fr) auto 58px;
   align-items: center;
-  justify-content: space-between;
+  gap: 34px;
 
-  padding: 28px clamp(24px, 5vw, 80px);
+  padding: 26px clamp(26px, 5vw, 88px);
 
-  background: rgba(34,28,24,0.22);
-  backdrop-filter: blur(14px);
+  background: linear-gradient(
+    180deg,
+    rgba(28, 22, 18, 0.62) 0%,
+    rgba(28, 22, 18, 0.32) 72%,
+    rgba(28, 22, 18, 0.04) 100%
+  );
 
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(198,165,122,0.10);
 }
 
 .brand {
-  display: flex;
+  position: relative;
+
+  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
+
+  width: fit-content;
+
+  padding: 18px 28px 16px 0;
+}
+
+.brand::before {
+  content: "";
+
+  position: absolute;
+  left: -28px;
+  top: 50%;
+
+  width: calc(100% + 54px);
+  height: 100px;
+
+  transform: translateY(-50%);
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(90deg, rgba(198,165,122,0.14), rgba(255,255,255,0.035), transparent 88%);
+
+  border: 1px solid rgba(198,165,122,0.10);
+
+  box-shadow:
+    0 22px 70px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+
+  pointer-events: none;
 }
 
 .brandLogo {
-  width: 320px;
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: 460px;
   max-width: 42vw;
+  max-height: 96px;
+
   object-fit: contain;
   object-position: left center;
-  display: block;
+
+  opacity: 1;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.22));
 }
 
 .logoFallback {
+  position: relative;
+  z-index: 2;
+
   display: none;
-  font-size: 34px;
-  letter-spacing: 0.32em;
-  font-weight: 600;
+
+  font-size: 42px;
+  letter-spacing: 0.34em;
+  font-weight: 650;
+
+  color: #f3ece4;
 }
 
 .logoSub {
-  margin-top: 8px;
+  position: relative;
+  z-index: 2;
 
-  font-size: 11px;
-  letter-spacing: 0.34em;
-  color: rgba(255,255,255,0.60);
+  margin-top: 10px;
 
+  font-size: 12px;
+  letter-spacing: 0.42em;
   text-transform: uppercase;
+
+  color: rgba(226, 200, 167, 0.84);
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 34px;
+  justify-content: flex-end;
+  gap: 30px;
 
-  font-size: 14px;
-  color: rgba(255,255,255,0.68);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+
+  color: rgba(255,255,255,0.66);
 }
 
 nav a {
@@ -103,28 +162,29 @@ nav a {
 }
 
 nav a:hover {
-  color: white;
+  color: #e8c89a;
 }
 
 .langSwitch {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
 
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 1px solid rgba(198,165,122,0.28);
 
-  background: rgba(255,255,255,0.04);
-  color: white;
+  background: rgba(198,165,122,0.08);
+  color: #f2e8dc;
 
   cursor: pointer;
   transition: .25s ease;
 }
 
 .langSwitch:hover {
-  background: rgba(255,255,255,0.12);
+  background: rgba(198,165,122,0.18);
 }
 
 /* HERO */
+
 
 .hero {
   display: grid;
@@ -134,7 +194,7 @@ nav a:hover {
   gap: clamp(56px, 7vw, 96px);
 
   padding:
-    clamp(150px, 15vw, 220px)
+    clamp(190px, 17vw, 260px)
     clamp(24px, 5vw, 80px)
     120px;
 
@@ -697,4 +757,56 @@ h2 {
 
 .heroVisual {
   box-shadow: 0 40px 120px rgba(0,0,0,.20);
+}
+
+
+/* DOMINANT HEADER RESPONSIVE OVERRIDES */
+
+@media (max-width: 1180px) {
+  .navbar {
+    grid-template-columns: 1fr 58px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .brandLogo {
+    width: 380px;
+    max-width: 64vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    padding: 18px 22px;
+    grid-template-columns: 1fr 48px;
+  }
+
+  .brand {
+    padding: 12px 20px 12px 0;
+  }
+
+  .brand::before {
+    left: -18px;
+    width: calc(100% + 36px);
+    height: 82px;
+    border-radius: 24px;
+  }
+
+  .brandLogo {
+    width: 260px;
+    max-width: 68vw;
+    max-height: 70px;
+  }
+
+  .logoSub {
+    margin-top: 7px;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+  }
+
+  .hero {
+    padding-top: 172px;
+  }
 }
