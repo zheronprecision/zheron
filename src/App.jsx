@@ -11,11 +11,11 @@ const content = {
     },
     hero: {
       eyebrow: "Savunma ve Havacılık Seviyesinde Hassas Parça Üretimi",
-      title: "Kontrollü üretim, Ölçülebilir kalite",
-      tagline: "Tolerans, yüzey kalitesi ve teslim disiplini gerektiren parçalar için",
+      title: "Kontrollü üretim. Ölçülebilir kalite.",
+      tagline: "Tolerans, yüzey kalitesi ve teslim disiplini gerektiren parçalar için.",
       paragraphs: [
         "ZHERON; savunma, havacılık ve yüksek hassasiyet gerektiren endüstriyel uygulamalar için tolerans kontrollü işlenmiş parçalar üretir.",
-        "Üretimde hacim iddialarından çok; yüzey kalitesi, ölçüsel tutarlılık, proses disiplini ve teslim güvenilirliğine odaklanırız",
+        "Üretimde hacim iddialarından çok; yüzey kalitesi, ölçüsel tutarlılık, proses disiplini ve teslim güvenilirliğine odaklanırız.",
       ],
       primary: "Becerileri İncele",
       secondary: "Teknik İletişim",
@@ -32,15 +32,15 @@ const content = {
       cards: [
         {
           title: "Yüksek Toleranslı İşleme",
-          text: "Kontrollü ölçüsel tutarlılığa sahip kompleks hassas parçaların üretimi",
+          text: "Kontrollü ölçüsel tutarlılığa sahip kompleks hassas parçaların üretimi.",
         },
         {
           title: "Proses Disiplini",
-          text: "Kararlı işleme yaklaşımı, ölçüm akışı ve tekrarlanabilir üretim mantığı",
+          text: "Kararlı işleme yaklaşımı, ölçüm akışı ve tekrarlanabilir üretim mantığı.",
         },
         {
           title: "Teslim Güvenilirliği",
-          text: "Planlı üretim yönetimi ve sorumluluğu net teslim süreçleri",
+          text: "Planlı üretim yönetimi ve sorumluluğu net teslim süreçleri.",
         },
       ],
     },
@@ -48,8 +48,8 @@ const content = {
       eyebrow: "Neden ZHERON",
       title: "Disiplinli üretim neden önemlidir?",
       paragraphs: [
-        "Hassas üretimde yalnızca üretim kabiliyeti yeterli değildir. Tutarlılık, ölçüm kültürü ve proses kararlılığı; bir tedarikçinin sürdürülebilir şekilde güvenilir olup olmadığını belirler",
-        "ZHERON; işleme yaklaşımından final ölçüm ve sevkiyat koordinasyonuna kadar kontrollü üretim anlayışına odaklanır",
+        "Hassas üretimde yalnızca üretim kabiliyeti yeterli değildir. Tutarlılık, ölçüm kültürü ve proses kararlılığı; bir tedarikçinin sürdürülebilir şekilde güvenilir olup olmadığını belirler.",
+        "ZHERON; işleme yaklaşımından final ölçüm ve sevkiyat koordinasyonuna kadar kontrollü üretim anlayışına odaklanır.",
       ],
     },
     process: {
@@ -58,23 +58,23 @@ const content = {
       items: [
         {
           title: "Teknik İnceleme",
-          text: "Teknik resim değerlendirmesi, tolerans analizi ve üretilebilirlik incelemesi",
+          text: "Teknik resim değerlendirmesi, tolerans analizi ve üretilebilirlik incelemesi.",
         },
         {
           title: "Proses Planlama",
-          text: "İşleme yaklaşımı, bağlama planlaması ve operasyon sıralaması",
+          text: "İşleme yaklaşımı, bağlama planlaması ve operasyon sıralaması.",
         },
         {
           title: "Kontrollü İşleme",
-          text: "Ölçüsel takip ile kararlı ve tekrarlanabilir üretim",
+          text: "Ölçüsel takip ile kararlı ve tekrarlanabilir üretim.",
         },
         {
           title: "Ölçüm ve Doğrulama",
-          text: "Ölçüm temelli kalite kontrol ve dokümantasyon disiplini",
+          text: "Ölçüm temelli kalite kontrol ve dokümantasyon disiplini.",
         },
         {
           title: "Teslimat Koordinasyonu",
-          text: "Koruyucu paketleme ve planlı sevkiyat yönetimi",
+          text: "Koruyucu paketleme ve planlı sevkiyat yönetimi.",
         },
       ],
     },
@@ -105,7 +105,7 @@ const content = {
     contact: {
       eyebrow: "İletişim",
       title: "Teknik İletişim",
-      text: "Teknik resimlerinizi veya üretim ihtiyaçlarınızı değerlendirme için bizimle paylaşın",
+      text: "Teknik resimlerinizi veya üretim ihtiyaçlarınızı değerlendirme için bizimle paylaşın.",
       name: "Ad Soyad",
       company: "Firma",
       email: "E-posta",
@@ -114,7 +114,7 @@ const content = {
       submit: "Gönder",
     },
     footer: {
-      line: "Savunma ve Havacılık Seviyesinde Üretim Disiplini",
+      line: "",
       rights: "© 2026 ZHERON. Tüm hakları saklıdır.",
     },
   },
@@ -128,11 +128,11 @@ const content = {
     },
     hero: {
       eyebrow: "Defense & Aerospace-Grade Precision Component Manufacturing",
-      title: "Controlled manufacturing. Measurable quality",
-      tagline: "For components requiring tolerance, surface quality and delivery discipline",
+      title: "Controlled manufacturing. Measurable quality.",
+      tagline: "For components requiring tolerance, surface quality and delivery discipline.",
       paragraphs: [
-        "ZHERON manufactures high-tolerance machined components for defense, aerospace and industrial applications requiring process discipline, dimensional consistency and delivery reliability",
-        "We focus on controlled manufacturing rather than volume claims — with attention to surface quality, material traceability, machining stability and measurement integrity",
+        "ZHERON manufactures high-tolerance machined components for defense, aerospace and industrial applications requiring process discipline, dimensional consistency and delivery reliability.",
+        "We focus on controlled manufacturing rather than volume claims — with attention to surface quality, material traceability, machining stability and measurement integrity.",
       ],
       primary: "Explore Skills",
       secondary: "Technical Contact",
@@ -149,24 +149,24 @@ const content = {
       cards: [
         {
           title: "High-Tolerance Machining",
-          text: "Complex precision components with controlled dimensional consistency",
+          text: "Complex precision components with controlled dimensional consistency.",
         },
         {
           title: "Process Discipline",
-          text: "Stable machining approach, inspection workflow and repeatable production logic",
+          text: "Stable machining approach, inspection workflow and repeatable production logic.",
         },
         {
           title: "Delivery Reliability",
-          text: "Structured production planning and accountable lead-time management",
+          text: "Structured production planning and accountable lead-time management.",
         },
       ],
     },
     why: {
       eyebrow: "Why ZHERON",
-      title: "Why disciplined manufacturing matters",
+      title: "Why disciplined manufacturing matters.",
       paragraphs: [
-        "In precision manufacturing, capability alone is not enough. Consistency, inspection culture and process stability determine whether a supplier can be trusted repeatedly",
-        "ZHERON focuses on controlled execution — from machining approach to final measurement and delivery coordination",
+        "In precision manufacturing, capability alone is not enough. Consistency, inspection culture and process stability determine whether a supplier can be trusted repeatedly.",
+        "ZHERON focuses on controlled execution — from machining approach to final measurement and delivery coordination.",
       ],
     },
     process: {
@@ -175,23 +175,23 @@ const content = {
       items: [
         {
           title: "Technical Review",
-          text: "Drawing evaluation, tolerance analysis and manufacturability review",
+          text: "Drawing evaluation, tolerance analysis and manufacturability review.",
         },
         {
           title: "Process Planning",
-          text: "Machining approach, workholding planning and operation sequencing",
+          text: "Machining approach, workholding planning and operation sequencing.",
         },
         {
           title: "Controlled Machining",
-          text: "Stable and repeatable production with dimensional monitoring",
+          text: "Stable and repeatable production with dimensional monitoring.",
         },
         {
           title: "Inspection & Verification",
-          text: "Measurement-based quality control and documentation discipline",
+          text: "Measurement-based quality control and documentation discipline.",
         },
         {
           title: "Delivery Coordination",
-          text: "Protected packaging and structured shipment planning",
+          text: "Protected packaging and structured shipment planning.",
         },
       ],
     },
@@ -231,7 +231,7 @@ const content = {
       submit: "Send",
     },
     footer: {
-      line: "Defense & Aerospace-Grade Manufacturing Discipline",
+      line: "",
       rights: "© 2026 ZHERON. All rights reserved.",
     },
   },
@@ -251,7 +251,7 @@ function LogoBlock() {
         }}
       />
       <div className="logoFallback">ZHERON</div>
-      <div className="logoSub">Precision for Perfection</div>
+      <div className="logoSub">PRECISION FOR PERFECTION</div>
     </a>
   );
 }
@@ -427,7 +427,6 @@ export default function App() {
       <footer className="footer">
         <div>
           <LogoBlock />
-          <div className="footerText">{t.footer.line}</div>
         </div>
 
         <div className="footerText">{t.footer.rights}</div>
