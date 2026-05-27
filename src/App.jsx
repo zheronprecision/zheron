@@ -97,7 +97,6 @@ const content = {
         "Alüminyum Alaşımları",
         "Paslanmaz Çelikler",
         "Titanyum",
-        "Mühendislik Plastikleri",
         "Takım Çelikleri",
         "Pirinç ve Bakır Alaşımları",
       ],
