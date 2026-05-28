@@ -627,6 +627,13 @@ textarea:focus {
   gap: 42px;
 }
 
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
 .footerLeft {
   display: flex;
   flex-direction: column;
