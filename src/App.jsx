@@ -457,7 +457,7 @@ export default function App() {
               {lang === "tr" ? "Lokasyon" : "Location"}
             </div>
 
-            <span>Ankara / Türkiye</span>
+            <span>Ostim OSB 1200 Cad No 28 Ankara / Türkiye</span>
             <span>
               {lang === "tr"
                 ? "Hassas parça üretimi"
