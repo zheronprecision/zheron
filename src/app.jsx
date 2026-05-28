@@ -426,7 +426,7 @@ export default function App() {
       
       <footer className="footer">
         <div className="footerTop">
-          <div className="footerLeft">
+          <div className="footerBrand">
             <LogoBlock />
 
             <p className="footerDescription">
@@ -438,39 +438,36 @@ export default function App() {
             </p>
           </div>
 
-          <div className="footerRight">
-            <div className="footerColumn">
-              <span className="footerLabel">
-                {lang === "tr" ? "İletişim" : "Contact"}
-              </span>
-
-              <a href="mailto:info@zheronprecision.com">
-                info@zheronprecision.com
-              </a>
-
-              <a href="tel:+905000000000">
-                +90 500 000 00 00
-              </a>
+          <div className="footerColumn">
+            <div className="footerLabel">
+              {lang === "tr" ? "İletişim" : "Contact"}
             </div>
 
-            <div className="footerColumn">
-              <span className="footerLabel">
-                {lang === "tr" ? "Lokasyon" : "Location"}
-              </span>
+            <a href="mailto:info@zheronprecision.com">
+              info@zheronprecision.com
+            </a>
 
-              <span>Ankara / Türkiye</span>
+            <a href="tel:+905000000000">
+              +90 500 000 00 00
+            </a>
+          </div>
 
-              <span>
-                {lang === "tr"
-                  ? "Hassas parça üretimi"
-                  : "Precision component manufacturing"}
-              </span>
+          <div className="footerColumn">
+            <div className="footerLabel">
+              {lang === "tr" ? "Lokasyon" : "Location"}
             </div>
+
+            <span>Ankara / Türkiye</span>
+            <span>
+              {lang === "tr"
+                ? "Hassas parça üretimi"
+                : "Precision component manufacturing"}
+            </span>
           </div>
         </div>
 
-        <div className="footerBottomLine">
-          <span>{t.footer.rights}</span>
+        <div className="footerBottom">
+          <div className="footerText">{t.footer.rights}</div>
         </div>
       </footer>
 
