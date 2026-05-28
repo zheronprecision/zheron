@@ -460,8 +460,7 @@ export default function App() {
             <span>Ostim OSB 1200 Cad No 28 Ankara / Türkiye</span>
             <span>
               {lang === "tr"
-                ? "Hassas parça üretimi"
-                : "Precision component manufacturing"}
+                ? 
             </span>
           </div>
         </div>
