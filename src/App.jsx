@@ -126,7 +126,7 @@ const content = {
       contact: "Contact",
     },
     hero: {
-      eyebrow: "Defense & Aerospace-Grade Precision Component Manufacturing",
+      eyebrow: "Defense & Aerospace-Grade PRECISION Component MANUFACTURING",
       title: "Controlled Manufacturing, Measurable Quality",
       tagline: "For components requiring tolerance, surface quality and delivery discipline",
       paragraphs: [
