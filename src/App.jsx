@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Crosshair, ShieldCheck, Ruler, Clock3 } from "lucide-react";
 
 const content = {
   tr: {
@@ -26,6 +27,28 @@ const content = {
       three: "Mikrometre",
       four: "Ölçüsel Kontrol",
     },
+    trust: [
+      {
+        icon: "crosshair",
+        title: "Yüksek Hassasiyet",
+        text: "Tolerans ve ölçüsel kararlılık gerektiren parçalar için kontrollü üretim yaklaşımı.",
+      },
+      {
+        icon: "shield",
+        title: "Güvenilir Süreç",
+        text: "Planlı üretim, kayıt disiplini ve izlenebilir iş akışı.",
+      },
+      {
+        icon: "ruler",
+        title: "Teknik Uyumluluk",
+        text: "Teknik resim, tolerans ve üretilebilirlik değerlendirmesiyle ilerleyen imalat.",
+      },
+      {
+        icon: "clock",
+        title: "Zamanında Teslimat",
+        text: "Açık iletişim, net termin ve tedarik sorumluluğu.",
+      },
+    ],
     what: {
       eyebrow: "Ne Yapıyoruz",
       title: "Kritik uygulamalar için hassas üretim",
@@ -126,7 +149,7 @@ const content = {
       contact: "Contact",
     },
     hero: {
-      eyebrow: "Defense & Aerospace-Grade PRECISION Component MANUFACTURING",
+      eyebrow: "Defense & Aerospace-Grade Precision Component Manufacturing",
       title: "Controlled Manufacturing, Measurable Quality",
       tagline: "For components requiring tolerance, surface quality and delivery discipline",
       paragraphs: [
@@ -142,6 +165,28 @@ const content = {
       three: "Micrometer",
       four: "Dimensional Control",
     },
+    trust: [
+      {
+        icon: "crosshair",
+        title: "High Precision",
+        text: "Controlled manufacturing approach for components requiring tolerance and dimensional stability.",
+      },
+      {
+        icon: "shield",
+        title: "Reliable Process",
+        text: "Planned production, record discipline and traceable workflow.",
+      },
+      {
+        icon: "ruler",
+        title: "Technical Compatibility",
+        text: "Manufacturing driven by drawing review, tolerance analysis and manufacturability.",
+      },
+      {
+        icon: "clock",
+        title: "On-Time Delivery",
+        text: "Clear communication, defined lead times and supplier responsibility.",
+      },
+    ],
     what: {
       eyebrow: "What We Do",
       title: "Precision Manufacturing for Critical Applications",
@@ -236,6 +281,14 @@ const content = {
   },
 };
 
+
+function TrustIcon({ type }) {
+  if (type === "crosshair") return <Crosshair size={32} strokeWidth={1.5} />;
+  if (type === "shield") return <ShieldCheck size={32} strokeWidth={1.5} />;
+  if (type === "ruler") return <Ruler size={32} strokeWidth={1.5} />;
+  return <Clock3 size={32} strokeWidth={1.5} />;
+}
+
 function LogoBlock() {
   return (
     <a href="#home" className="brand" aria-label="ZHERON Home">
@@ -250,7 +303,6 @@ function LogoBlock() {
         }}
       />
       <div className="logoFallback">ZHERON</div>
-      <div className="logoSub">PRECISION FOR PERFECTION</div>
     </a>
   );
 }
@@ -313,6 +365,20 @@ export default function App() {
             <span className="visualTag tagFour">{t.visual.four}</span>
             <div className="measurementRing"></div>
           </div>
+        </section>
+
+        <section className="trustBand" aria-label="ZHERON production principles">
+          {t.trust.map((item) => (
+            <article className="trustItem" key={item.title}>
+              <div className="trustIcon">
+                <TrustIcon type={item.icon} />
+              </div>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            </article>
+          ))}
         </section>
 
         <section className="section">
