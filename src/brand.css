@@ -1,0 +1,65 @@
+/* Official ZHERON identity — emblem + custom wordmark */
+.brand {
+  display: grid !important;
+  grid-template-columns: 54px auto !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 15px !important;
+  row-gap: 4px !important;
+  align-items: center !important;
+  padding: 10px 24px 10px 0 !important;
+}
+
+.brand::before {
+  height: 84px !important;
+}
+
+.brandLogo,
+.logoFallback {
+  display: none !important;
+}
+
+.brand::after {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 54px;
+  height: 66px;
+  background: url("/images/zheron-emblem.webp") center / contain no-repeat;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.28));
+}
+
+.logoSub {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0 !important;
+  font-size: 9px !important;
+  letter-spacing: .31em !important;
+  color: rgba(198,165,122,.86) !important;
+  white-space: nowrap;
+}
+
+.brand > .logoSub::before {
+  content: "";
+  display: block;
+  width: min(296px, 28vw);
+  height: 47px;
+  margin-bottom: 3px;
+  background: url("/images/zheron-wordmark.webp") left center / contain no-repeat;
+}
+
+@media (max-width: 900px) {
+  .brand {
+    grid-template-columns: 42px auto !important;
+    column-gap: 10px !important;
+  }
+  .brand::after { width: 42px; height: 52px; }
+  .brand > .logoSub::before { width: 190px; height: 32px; }
+  .logoSub { font-size: 7px !important; letter-spacing: .22em !important; }
+}
+
+@media (max-width: 600px) {
+  .brand > .logoSub::before { width: 145px; height: 26px; }
+  .brand::after { width: 34px; height: 43px; }
+  .brand { grid-template-columns: 34px auto !important; }
+  .logoSub { display: block !important; font-size: 6px !important; }
+}
