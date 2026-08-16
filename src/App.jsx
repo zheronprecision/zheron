@@ -243,14 +243,7 @@ function LogoBlock() {
         src="/images/zheron-logo.png?v=20260816"
         alt="ZHERON"
         className="brandLogo"
-        onError={(event) => {
-          event.currentTarget.style.display = "none";
-          const fallback = event.currentTarget.nextElementSibling;
-          if (fallback) fallback.style.display = "block";
-        }}
       />
-      <div className="logoFallback">ZHERON</div>
-      <div className="logoSub">PRECISION FOR PERFECTION</div>
     </a>
   );
 }
