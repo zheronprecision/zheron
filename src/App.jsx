@@ -240,7 +240,7 @@ function LogoBlock() {
   return (
     <a href="#home" className="brand" aria-label="ZHERON Home">
       <img
-        src="/images/zheron-logo.png?v=20260816"
+        src="/images/zheron-logo-v3.png"
         alt="ZHERON"
         className="brandLogo"
       />
