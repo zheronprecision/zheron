@@ -429,9 +429,11 @@ export default function App() {
 
           <div className="footerColumn">
             <div className="footerLabel">
-              {lang === "tr" ? "Lokasyon" : "Location"}
+              {lang === "tr" ? "İletişim" : "Contact"}
             </div>
 
+            <a href="mailto:info@zheron.com.tr">info@zheron.com.tr</a>
+            <a href="tel:+903125440800">+90 (312) 544 08 00</a>
             <span>Ostim OSB 1200 Cad No 28 Ankara / Türkiye</span>
           </div>
         </div>
