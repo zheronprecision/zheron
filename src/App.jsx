@@ -131,7 +131,7 @@ const content = {
     contact: {
       eyebrow: "İletişim",
       title: "Teknik İletişim",
-      text: "Teknik resimlerinizi veya üretim ihtiyaçlarınızı değerlendirme için bizimle paylaşın.",
+      text: "Teknik resimlerinizi ve üretim ihtiyaçlarınızı incelememiz için bizimle paylaşabilirsiniz.",
       name: "Ad Soyad",
       company: "Firma",
       email: "E-posta",
