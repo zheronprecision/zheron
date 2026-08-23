@@ -7,6 +7,7 @@ const content = {
       skills: "Beceriler",
       process: "Proses",
       materials: "Malzemeler",
+      machines: "Makine Parkuru",
       contact: "İletişim",
     },
     hero: {
@@ -101,6 +102,31 @@ const content = {
         "Pirinç ve Bakır Alaşımları",
       ],
     },
+    machinePark: {
+      eyebrow: "Makine Parkuru",
+      title: "Çok Eksenli İşleme Kabiliyeti",
+      intro: "Torna-freze ve dik işleme altyapımız; karmaşık geometriler, çoklu operasyonlar ve hassas tolerans gerektiren parçalar için yapılandırılmıştır.",
+      machines: [
+        {
+          name: "BIGLIA B501 Y-S",
+          type: "Y eksenli CNC torna / freze merkezi",
+          image: "/images/biglia-b501-ys.jpg",
+          specs: ["Y ekseni + karşı iş mili", "Canlı takım", "500 mm işleme boyu", "Ø250 mm tornalama kapasitesi"],
+        },
+        {
+          name: "HARDINGE GS-200 MSY",
+          type: "Çok eksenli CNC torna / freze merkezi",
+          image: "/images/hardinge-gs200-msy.jpg",
+          specs: ["Y ekseni + sub-spindle", "12 istasyon canlı takımlı taret", "C ekseni", "4.500 rpm ana iş mili"],
+        },
+        {
+          name: "HISION CFV 1100",
+          type: "Dik işleme merkezi",
+          image: "/images/hision-cfv1100.jpg",
+          specs: ["X/Y/Z: 1100 / 540 / 520 mm", "12.000 rpm iş mili", "36 m/dk hızlı hareket", "24 takımlı ATC"],
+        },
+      ],
+    },
     contact: {
       eyebrow: "İletişim",
       title: "Teknik İletişim",
@@ -123,6 +149,7 @@ const content = {
       skills: "Skills",
       process: "Process",
       materials: "Materials",
+      machines: "Machine Park",
       contact: "Contact",
     },
     hero: {
@@ -218,6 +245,31 @@ const content = {
         "Brass & Copper Alloys",
       ],
     },
+    machinePark: {
+      eyebrow: "Machine Park",
+      title: "Multi-Axis Machining Capability",
+      intro: "Our turn-mill and vertical machining infrastructure is configured for complex geometries, multi-operation components and demanding dimensional requirements.",
+      machines: [
+        {
+          name: "BIGLIA B501 Y-S",
+          type: "Y-axis CNC turning / milling center",
+          image: "/images/biglia-b501-ys.jpg",
+          specs: ["Y-axis + sub-spindle", "Live tooling", "500 mm machining length", "Ø250 mm turning capacity"],
+        },
+        {
+          name: "HARDINGE GS-200 MSY",
+          type: "Multi-axis CNC turning / milling center",
+          image: "/images/hardinge-gs200-msy.jpg",
+          specs: ["Y-axis + sub-spindle", "12-station live-tool turret", "C-axis", "4,500 rpm main spindle"],
+        },
+        {
+          name: "HISION CFV 1100",
+          type: "Vertical machining center",
+          image: "/images/hision-cfv1100.jpg",
+          specs: ["X/Y/Z: 1100 / 540 / 520 mm", "12,000 rpm spindle", "36 m/min rapid traverse", "24-tool ATC"],
+        },
+      ],
+    },
     contact: {
       eyebrow: "Contact",
       title: "Technical Contact",
@@ -262,6 +314,7 @@ export default function App() {
           <a href="#skills">{t.nav.skills}</a>
           <a href="#process">{t.nav.process}</a>
           <a href="#materials">{t.nav.materials}</a>
+          <a href="#machine-park">{t.nav.machines}</a>
           <a href="#contact">{t.nav.contact}</a>
         </nav>
 
@@ -392,6 +445,41 @@ export default function App() {
           <div className="gridThree">
             {t.materials.items.map((item) => (
               <article className="listCard" key={item}>{item}</article>
+            ))}
+          </div>
+        </section>
+
+
+        <section id="machine-park" className="section muted machineParkSection">
+          <div className="sectionHeader machineParkHeader">
+            <div>
+              <div className="eyebrow">{t.machinePark.eyebrow}</div>
+              <h2>{t.machinePark.title}</h2>
+            </div>
+            <p className="machineParkIntro">{t.machinePark.intro}</p>
+          </div>
+
+          <div className="machineGrid">
+            {t.machinePark.machines.map((machine) => (
+              <article className="machineCard" key={machine.name}>
+                <div className="machineImageWrap">
+                  <img
+                    src={machine.image}
+                    alt={machine.name}
+                    className="machineImage"
+                    loading="lazy"
+                    onError={(e) => (e.currentTarget.style.display = "none")}
+                  />
+                  <div className="machineImageOverlay"></div>
+                </div>
+                <div className="machineBody">
+                  <div className="machineType">{machine.type}</div>
+                  <h3>{machine.name}</h3>
+                  <div className="machineSpecs">
+                    {machine.specs.map((spec) => <span key={spec}>{spec}</span>)}
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </section>
