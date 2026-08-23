@@ -8,6 +8,7 @@ const content = {
       process: "Proses",
       materials: "Malzemeler",
       machines: "Makine Parkuru",
+      certifications: "Sertifikasyon",
       contact: "İletişim",
     },
     hero: {
@@ -135,8 +136,24 @@ const content = {
       company: "Firma",
       email: "E-posta",
       phone: "Telefon",
-      message: "Mesaj",
-      submit: "Gönder",
+      material: "Malzeme / Alaşım",
+      quantity: "Adet",
+      deadline: "İstenen termin",
+      drawing: "Teknik resim / STEP / PDF",
+      message: "Parça, tolerans veya özel gereksinimler",
+      submit: "RFQ E-postası Oluştur",
+      fileNote: "Dosyanızı seçin; e-posta açıldığında seçtiğiniz dosyayı ek olarak iliştirin.",
+    },
+    certifications: {
+      eyebrow: "Sertifikasyon",
+      title: "Belgelenmiş yönetim sistemleri",
+      text: "ZHERON; kalite, çevre, iş sağlığı ve güvenliği ile müşteri memnuniyeti yönetim sistemlerini uluslararası ISO standartları doğrultusunda belgelendirmiştir.",
+      certificates: [
+        { code: "ISO 9001", name: "Kalite Yönetim Sistemi", image: "/images/iso-9001.jpg" },
+        { code: "ISO 14001", name: "Çevre Yönetim Sistemi", image: "/images/iso-14001.jpg" },
+        { code: "ISO 45001", name: "İş Sağlığı ve Güvenliği Yönetim Sistemi", image: "/images/iso-45001.jpg" },
+        { code: "ISO 10002", name: "Müşteri Memnuniyeti Yönetim Sistemi", image: "/images/iso-10002.jpg" },
+      ],
     },
     footer: {
       line: "",
@@ -150,6 +167,7 @@ const content = {
       process: "Process",
       materials: "Materials",
       machines: "Machine Park",
+      certifications: "Certification",
       contact: "Contact",
     },
     hero: {
@@ -278,8 +296,24 @@ const content = {
       company: "Company",
       email: "Email",
       phone: "Phone",
-      message: "Message",
-      submit: "Send",
+      material: "Material / Alloy",
+      quantity: "Quantity",
+      deadline: "Requested lead time",
+      drawing: "Drawing / STEP / PDF",
+      message: "Part, tolerance or special requirements",
+      submit: "Create RFQ Email",
+      fileNote: "Select your file; when your email opens, attach the selected file to the message.",
+    },
+    certifications: {
+      eyebrow: "Certification",
+      title: "Certified management systems",
+      text: "ZHERON has certified its management systems for quality, environment, occupational health and safety, and customer satisfaction in accordance with international ISO standards.",
+      certificates: [
+        { code: "ISO 9001", name: "Quality Management System", image: "/images/iso-9001.jpg" },
+        { code: "ISO 14001", name: "Environmental Management System", image: "/images/iso-14001.jpg" },
+        { code: "ISO 45001", name: "Occupational Health & Safety Management System", image: "/images/iso-45001.jpg" },
+        { code: "ISO 10002", name: "Customer Satisfaction Management System", image: "/images/iso-10002.jpg" },
+      ],
     },
     footer: {
       line: "",
@@ -315,6 +349,7 @@ export default function App() {
           <a href="#process">{t.nav.process}</a>
           <a href="#materials">{t.nav.materials}</a>
           <a href="#machine-park">{t.nav.machines}</a>
+          <a href="#certifications">{t.nav.certifications}</a>
           <a href="#contact">{t.nav.contact}</a>
         </nav>
 
@@ -484,6 +519,33 @@ export default function App() {
           </div>
         </section>
 
+        <section id="certifications" className="section certificationSection">
+          <div className="sectionHeader certificationHeader">
+            <div className="eyebrow">{t.certifications.eyebrow}</div>
+            <h2>{t.certifications.title}</h2>
+            <p className="certificationText">{t.certifications.text}</p>
+          </div>
+
+          <div className="certificationCards">
+            {t.certifications.certificates.map((certificate) => (
+              <article className="certificateCard" key={certificate.code}>
+                <div className="certificateImageWrap">
+                  <img
+                    src={certificate.image}
+                    alt={`${certificate.code} ${certificate.name}`}
+                    className="certificateImage"
+                    onError={(event) => { event.currentTarget.style.display = "none"; }}
+                  />
+                </div>
+                <div className="certificateMeta">
+                  <div className="certificateCode">{certificate.code}</div>
+                  <div className="certificateName">{certificate.name}</div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="contact" className="section muted">
           <div className="twoColumn">
             <div>
@@ -492,13 +554,44 @@ export default function App() {
               <p className="contactIntro">{t.contact.text}</p>
             </div>
 
-            <form className="contactBox">
-              <input placeholder={t.contact.name} />
-              <input placeholder={t.contact.company} />
-              <input placeholder={t.contact.email} />
-              <input placeholder={t.contact.phone} />
-              <textarea rows="6" placeholder={t.contact.message}></textarea>
-              <button className="solidBtn" type="button">{t.contact.submit}</button>
+            <form className="contactBox" onSubmit={(e) => {
+              e.preventDefault();
+              const fd = new FormData(e.currentTarget);
+              const subject = `RFQ - ${fd.get("company") || fd.get("name") || "Website"}`;
+              const body = [
+                `${t.contact.name}: ${fd.get("name") || "-"}`,
+                `${t.contact.company}: ${fd.get("company") || "-"}`,
+                `${t.contact.email}: ${fd.get("email") || "-"}`,
+                `${t.contact.phone}: ${fd.get("phone") || "-"}`,
+                `${t.contact.material}: ${fd.get("material") || "-"}`,
+                `${t.contact.quantity}: ${fd.get("quantity") || "-"}`,
+                `${t.contact.deadline}: ${fd.get("deadline") || "-"}`,
+                "",
+                `${t.contact.message}:`,
+                fd.get("message") || "-",
+              ].join("\n");
+              window.location.href = `mailto:info@zheron.com.tr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            }}>
+              <div className="rfqRow">
+                <input name="name" placeholder={t.contact.name} required />
+                <input name="company" placeholder={t.contact.company} required />
+              </div>
+              <div className="rfqRow">
+                <input name="email" type="email" placeholder={t.contact.email} required />
+                <input name="phone" placeholder={t.contact.phone} />
+              </div>
+              <div className="rfqRow">
+                <input name="material" placeholder={t.contact.material} />
+                <input name="quantity" type="number" min="1" placeholder={t.contact.quantity} />
+              </div>
+              <input name="deadline" placeholder={t.contact.deadline} />
+              <label className="fileUpload">
+                <span>{t.contact.drawing}</span>
+                <input name="drawing" type="file" accept=".pdf,.step,.stp,.stl,.iges,.igs,.dxf,.dwg,.zip" />
+              </label>
+              <div className="fileNote">{t.contact.fileNote}</div>
+              <textarea name="message" rows="6" placeholder={t.contact.message}></textarea>
+              <button className="solidBtn" type="submit">{t.contact.submit}</button>
             </form>
           </div>
         </section>

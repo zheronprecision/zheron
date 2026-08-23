@@ -997,3 +997,23 @@ h2 {
   .machineBody { padding: 24px; }
   .machineBody h3 { font-size: 21px; }
 }
+
+
+/* CERTIFICATION + RFQ */
+.certificationHeader { max-width: 860px; }
+.certificationText { margin-top:28px; max-width:760px; color:var(--muted); font-size:18px; line-height:1.9; }
+.certificationCards { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:20px; }
+.certificateCard { overflow:hidden; border-radius:28px; border:1px solid rgba(198,165,122,.16); background:rgba(255,255,255,.04); box-shadow:inset 0 1px 0 rgba(255,255,255,.03); transition:transform .25s ease,border-color .25s ease,background .25s ease; }
+.certificateCard:hover { transform:translateY(-4px); border-color:rgba(198,165,122,.34); background:rgba(198,165,122,.055); }
+.certificateImageWrap { aspect-ratio:4 / 3; display:flex; align-items:center; justify-content:center; padding:22px; background:rgba(244,243,239,.96); border-bottom:1px solid rgba(198,165,122,.14); }
+.certificateImage { width:100%; height:100%; object-fit:contain; display:block; }
+.certificateMeta { padding:24px 24px 26px; }
+.certificateCode { color:#e3c39d; font-size:13px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px; }
+.certificateName { color:#f1ebe5; font-size:16px; line-height:1.5; }
+.rfqRow { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.fileUpload { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 18px; border-radius:18px; border:1px dashed rgba(198,165,122,.32); background:rgba(0,0,0,.12); color:rgba(255,255,255,.68); cursor:pointer; }
+.fileUpload input { width:auto; padding:0; border:0; background:transparent; border-radius:0; color:rgba(255,255,255,.55); }
+.fileNote { margin-top:-6px; color:rgba(255,255,255,.38); font-size:12px; line-height:1.5; }
+@media (max-width:1100px) { .certificationCards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:900px) { .rfqRow { grid-template-columns:1fr; } }
+@media (max-width:620px) { .certificationCards { grid-template-columns:1fr; } .certificateImageWrap { aspect-ratio:16 / 10; } }
